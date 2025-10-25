@@ -8,12 +8,12 @@ The goal is to transition from circuit-level design to backend physical implemen
 # Contents
 # Steps to Install OpenROAD and Run GUI
 
-    1. Clone the OpenROAD Repository
-    2. Run the Setup Script
-    3. Build OpenROAD
-    4. Verify Installation
-    5. Run the OpenROAD Flow
-    6. Launch the GUI
+ 1. Clone the OpenROAD Repository
+ 2. Run the Setup Script
+ 3. Build OpenROAD
+ 4. Verify Installation
+ 5. Run the OpenROAD Flow
+ 6. Launch the GUI
 
 ## 1. Clone the OpenROAD Repository
 ```bash
