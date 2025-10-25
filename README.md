@@ -52,6 +52,8 @@ make
 ![openroad](assets/GUI.png)
 
 # Floorplan and placement
+
+Practiced floorplanning and placement for gcd file in OpenROAD.
 ```bash
 cd ~/OpenROAD-flow-scripts/flow
 make DESIGN=gcd FLOW_STEPS=floorplan,placement
