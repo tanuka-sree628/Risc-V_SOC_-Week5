@@ -16,23 +16,23 @@ The goal is to transition from circuit-level design to backend physical implemen
     6. Launch the GUI
 
 ## 1. Clone the OpenROAD Repository
-```
+```bash
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
 cd OpenROAD-flow-scripts
 ```
 ![openroad](assets/clone.png)
 ## 2. Run the Setup Script
-```
+```bash
 sudo ./setup.sh
 ```
 ![openroad](assets/setup.png)
 ## 3. Build OpenROAD
-```
+```bash
 ./build_openroad.sh --local
 ```
 ![openroad](assets/Build.png)
 ## 4. Verify Installation
-```
+```bash
 source ./env.sh
 yosys -help  
 openroad -help
@@ -40,19 +40,19 @@ openroad -help
 ![openroad](assets/verify_setup.png)
 ![openroad](assets/verify_setup_1.png)
 ## 5. Run the OpenROAD Flow
-``` 
+```bash
 cd flow
 make
 ```
 ![openroad](assets/Run_OpenROAD.png)
 ## 6. Launch the GUI
-```
+```bash
  make gui_final
 ```
 ![openroad](assets/GUI.png)
 
 # Floorplan and placement
-```
+```bash
 cd ~/OpenROAD-flow-scripts/flow
 make DESIGN=gcd FLOW_STEPS=floorplan,placement
 cd ~/OpenROAD-flow-scripts/flow/results/nangate45/gcd/base
@@ -65,21 +65,21 @@ openroad> read_db 3_5_place_dp.odb
 write_def 3_5_place_dp.def
 exit
 ```
-```
+```bash
 openroad -gui
 ```
 ![openroad](assets/gcd_make.png)
 
 ## Openroad tcl commands:
 - floorplan:
-  ```
+  ```tcl
   read_lef ~/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
   read_lef ~/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.lef
   read_def ~/OpenROAD-flow-scripts/flow/results/nangate45/gcd/base/2_1_floorplan.def
   ```
   ![openroad](assets/Floorplanning.png)
 - Placement:
-  ```
+  ```tcl
   read_lef ~/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
   read_lef ~/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.lef
   read_db /home/tanuja/OpenROAD-flow-scripts/flow/results/nangate45/gcd/base/3_5_place_dp.odb
