@@ -1,0 +1,16 @@
+OpenROAD v2.0-25765-g83ff256997 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+>>> read_lef ~/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+... 
+[INFO ODB-0227] LEF file: /home/tanukasree/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+>>> read_lef ~/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.lef
+[INFO ODB-0227] LEF file: /home/tanukasree/OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.lef, created 134 library cells
+>>> read_def /home/tanukasree/OpenROAD-flow-scripts/flow/results/nangate45/gcd/base/2_1_floorplan.def
+[INFO ODB-0127] Reading DEF file: /home/tanukasree/OpenROAD-flow-scripts/flow/results/nangate45/gcd/base/2_1_floorplan.def
+[INFO ODB-0128] Design: gcd
+[INFO ODB-0130]     Created 54 pins.
+[INFO ODB-0131]     Created 503 components and 2570 component-terminals.
+[INFO ODB-0133]     Created 574 nets and 1564 connections.
+[INFO ODB-0134] Finished DEF file: /home/tanukasree/OpenROAD-flow-scripts/flow/results/nangate45/gcd/base/2_1_floorplan.def
